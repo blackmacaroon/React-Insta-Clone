@@ -1,17 +1,18 @@
 import React from 'react';
+import Obj from './Obj'
+
 import './postContainer.css';
 
-const PostContainer = (props) => {
+function PostContainer (props) {
+
       return (
-            <div className='container'>
-                  <div className='post'>
-                        <img src='' />
-                        <h1>username</h1>
-                        <p>hashtag fun stuff and things</p>
-                  </div>
-            </div>
-      
+            <div className='postObject'>
+                  {props.dummyData.map(object =>
+                        <Obj
+                        key={object.id}
+                        object={object} />
+                  )}
+            </div> 
       )
 }
-
 export default PostContainer

@@ -13,12 +13,11 @@ class App extends React.Component {
     };
   }
 
-
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer />
+        <PostContainer dummyData={this.state.dummyData}/>
         <CommentSection />
       </div>
     );

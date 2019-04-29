@@ -4,7 +4,7 @@ import './searchBar.css';
 const SearchBar = (props) => {
       return (
             <div className="heading">
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram fa-2x"></i>
                   <div className='searchBar'>
                         <label>Search</label>
                         <input type='text' placeholder='searching for'></input>
