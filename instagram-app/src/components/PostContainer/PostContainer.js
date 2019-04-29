@@ -4,6 +4,7 @@ import Obj from './Obj'
 import './postContainer.css';
 
 function PostContainer (props) {
+      console.log('props', props);
 
       return (
             <div className='postObject'>

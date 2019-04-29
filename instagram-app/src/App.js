@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
+import CommentSection from './components/PostContainer/CommentSection/CommentSection';
 import dummyData from './dummy-data';
 import './App.css';
 
@@ -9,9 +9,10 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      dummyData: dummyData
     };
   }
+
 
   render() {
     return (
@@ -23,5 +24,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 export default App;
