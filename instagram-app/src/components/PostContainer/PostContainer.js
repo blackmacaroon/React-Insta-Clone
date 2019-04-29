@@ -8,7 +8,7 @@ function PostContainer (props) {
 
       return (
             <div className='postObject'>
-                  {props.dummyData.map(object =>
+                  {props.posts.map(object =>
                         <Obj
                         key={object.id}
                         object={object} />
