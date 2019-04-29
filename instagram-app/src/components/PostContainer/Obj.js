@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Obj (props) {
-      console.log('props', props);
+      // console.log('props', props);
       return (
             <div className='card'>
                   <img src={props.object.imageUrl} alt='pretty picture'/>

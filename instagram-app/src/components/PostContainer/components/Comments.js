@@ -1,13 +1,18 @@
 import React from 'react';
 
-function Comment (props) {
+
+function Comments (props) {
       console.log('props', props);
+
       return (
-            <div className='comment'>
-                  <p>{props.comment.username}</p>
-                  <p>{props.comment.text}</p>
-            </div>
+            <div className='commentObject'>
+                  {props.object.comments.map(comment =>
+                        <div>
+                              <h3>{comment.username}</h3>
+                              <p>{comment.text}</p>
+                        </div>
+                  )}
+            </div> 
       )
 }
-
-export default Comment;
+export default Comments
