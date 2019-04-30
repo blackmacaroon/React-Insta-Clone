@@ -6,7 +6,8 @@ import './postContainer.css';
 import Comments from './components/Comments';
 
 function PostContainer (props) {
-      // console.log('props', props);
+      
+      console.log('props', props);
 
 
       return (

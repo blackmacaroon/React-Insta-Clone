@@ -7,15 +7,22 @@ import './App.css';
 
 class App extends React.Component {
   constructor() {
+    console.log('construct')
     super();
     this.state = {
-      posts: dummyData
+      posts: []
       
     };
   }
 
+  componentDidMount () {
+    console.log('CDM')
+    this.setState({ posts: dummyData })
+    console.log(dummyData)
+  }
 
   render() {
+    console.log('render')
     return (
       <div className="App">
         <SearchBar />

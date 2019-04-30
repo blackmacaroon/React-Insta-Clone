@@ -5,10 +5,10 @@ function Obj (props) {
       // console.log('props', props);
       return (
             <div className='card'>
-                  <img src={props.object.imageUrl} alt='pretty picture'/>
+                  <img src={props.object.imageUrl} alt='pretty thing'/>
                   <div className='anchors'>
-                        <a href='#'><i class="fas fa-heart"></i></a>
-                        <a href='#'><i class="fas fa-comment"></i></a>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
                   </div>
                   <p>{props.object.likes} likes</p>
             </div>
