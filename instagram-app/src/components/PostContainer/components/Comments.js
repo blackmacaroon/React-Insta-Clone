@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 function Comments (props) {
@@ -14,5 +15,12 @@ function Comments (props) {
                   )}
             </div> 
       )
+}
+
+Comments.propTypes = {
+       object: PropTypes.shape({
+             username: PropTypes.string.isRequired,
+             text: PropTypes.string
+       })
 }
 export default Comments

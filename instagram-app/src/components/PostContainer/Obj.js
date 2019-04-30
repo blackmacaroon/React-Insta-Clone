@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Obj (props) {
       // console.log('props', props);
@@ -12,6 +13,13 @@ function Obj (props) {
                   <p>{props.object.likes} likes</p>
             </div>
       )
+}
+
+Obj.propTypes ={
+      object: PropTypes.shape ({
+            imageUrl: PropTypes.string.isRequired,
+            likes: PropTypes.number
+      })
 }
 
 export default Obj;

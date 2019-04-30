@@ -1,5 +1,6 @@
 import React from 'react';
 import Obj from './Obj'
+import PropTypes from 'prop-types';
 
 import './postContainer.css';
 import Comments from './components/Comments';
@@ -23,5 +24,9 @@ function PostContainer (props) {
             </div> 
             
       )
+}
+
+PostContainer.propTypes = {
+      posts: PropTypes.arrayOf(PropTypes.object)
 }
 export default PostContainer;
