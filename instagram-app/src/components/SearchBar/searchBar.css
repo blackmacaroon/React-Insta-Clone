@@ -1,0 +1,13 @@
+.heading {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      margin: 10px auto;
+
+}
+
+
+.nav a {
+      color: black;
+      margin-left: 20px;
+}

@@ -5,10 +5,11 @@ function Obj (props) {
       return (
             <div className='card'>
                   <img src={props.object.imageUrl} alt='pretty picture'/>
-                  <div className='foot'>
-                        <p>Likes: {props.object.likes}</p>
-                        <p>Posted: {props.object.timestamp}</p>
+                  <div className='anchors'>
+                        <a href='#'><i class="fas fa-heart"></i></a>
+                        <a href='#'><i class="fas fa-comment"></i></a>
                   </div>
+                  <p>{props.object.likes} likes</p>
             </div>
       )
 }
