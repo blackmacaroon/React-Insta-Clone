@@ -17,6 +17,8 @@ function PostContainer (props) {
                               <Obj
                               object={object} />
                               <Comments
+                              handleChanges={props.handleChanges} 
+                              submitComment={props.submitComment}
                               object={object} />
                         </div>
                         
