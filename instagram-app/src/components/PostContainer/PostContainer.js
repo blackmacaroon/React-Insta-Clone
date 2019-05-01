@@ -1,25 +1,30 @@
 import React from 'react';
 import Obj from './Obj'
 import PropTypes from 'prop-types';
-
 import './postContainer.css';
-import Comments from './components/Comments';
+import CommentsSection from './components/CommentsSection';
 
 function PostContainer (props) {
       
-      console.log('props', props);
+      // console.log('props', props);
+      // receiving props from app array posts
 
 
       return (
             <div className='postObject'>
+                  {/* mapping thorough the array posts to create separate objects, passing the objects to Obj and CommentsSection */}
                   {props.posts.map(object =>
-                        <div key={object.id}>
+                        <div >
                               <Obj
+                              key={object.timestamp}
                               object={object} />
-                              <Comments
-                              handleChanges={props.handleChanges} 
-                              submitComment={props.submitComment}
+                              <CommentsSection
+                              key={object.timestamp}
                               object={object} />
+                              
+                              {/* // handleChanges={props.handleChanges} 
+                              // submitComment={props.submitComment} */}
+                              
                         </div>
                         
                   )}
