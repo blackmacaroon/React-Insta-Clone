@@ -1,6 +1,7 @@
 import React from 'react';
 import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
+import LoginPage from './components/Login/LoginPage'
+// import withAuthenticate from './components/authentication/withAuthenticate';
 import './App.css';
 
 class App extends React.Component {
