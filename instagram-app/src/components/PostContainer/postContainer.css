@@ -1,0 +1,22 @@
+.card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+}
+
+.anchors {
+      display: flex;
+
+}
+
+.anchors a {
+      color: black;
+      margin-right: 20px;
+}
+
+.postObject {
+      border: 1px solid #d3d3d3;
+      margin: 20px 0;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
