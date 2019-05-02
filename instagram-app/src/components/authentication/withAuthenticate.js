@@ -1,4 +1,5 @@
-import React from './react';
+import React from 'react';
+
 
 
 const withAuthenticate = PostsPage => LoginPage =>
@@ -13,6 +14,13 @@ const withAuthenticate = PostsPage => LoginPage =>
     ///////////////////////////
     //toggle login if local storage has 'user' login = true?
     //with ComponentDidMount because something was updated??
+    componentDidMount () {
+      if (localStorage.getItem('user')) {
+        this.setState({ loggedIn: true });
+      } else {
+        this.setState({ loggedIn: false });
+      }
+    }
 
     render() {
       if(this.state.loggedIn === true) {

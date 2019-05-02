@@ -1,8 +1,8 @@
-import React from 'react';
-import PostsPage from './components/PostContainer/PostsPage';
-import LoginPage from './components/Login/LoginPage'
-import withAuthenticate from './components/authentication/withAuthenticate';
-import './App.css';
+import React from "react";
+import PostsPage from "./components/PostContainer/PostsPage";
+import LoginPage from "./components/Login/LoginPage";
+import withAuthenticate from "./components/authentication/withAuthenticate";
+import "./App.css";
 
 class App extends React.Component {
   constructor() {
@@ -17,6 +17,7 @@ class App extends React.Component {
     // console.log('render')
     return (
       <div className="App">
+        {/* <PostsPage /> */}
         <ComponentFromWithAuthenticate />
       </div>
     );

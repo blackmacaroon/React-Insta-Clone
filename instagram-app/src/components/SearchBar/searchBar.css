@@ -1,8 +1,10 @@
 .heading {
+      height: 100px;
       display: flex;
       flex-wrap: nowrap;
-      justify-content: space-evenly;
+      justify-content: space-between;
       margin: 10px auto;
+      border-bottom: 1px solid #d3d3d3;
 
 }
 

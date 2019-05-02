@@ -1,19 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Obj (props) {
+class Obj extends React.Component {
+      constructor(props) {
+            super(props);
+            this.state = {
+                  likes: props.object.likes
+            };
+      }
       // console.log('props', props);
       // receiving props.object from PostContainer and returning card div
-      return (
-            <div className='card'>
-                  <img src={props.object.imageUrl} alt='pretty thing'/>
-                  <div className='anchors'>
-                        <i className="fas fa-heart"></i>
-                        <i className="fas fa-comment"></i>
+
+     
+      incrementLike = () => {
+            let likes = this.state.likes + 1;
+            this.setState({ likes });
+          };
+
+      render() {
+            return (
+                  <div className='card'>
+                        <img src={this.props.object.imageUrl} alt='pretty thing'/>
+                        <div className='anchors'>
+                              <i className="fas fa-heart" onClick={this.incrementLike}></i>
+                              <i className="fas fa-comment"></i>
+                        </div>
+                        <p>{this.props.object.likes} likes</p>
                   </div>
-                  <p>{props.object.likes} likes</p>
-            </div>
-      )
+            )
+      }
 }
 
 Obj.propTypes ={

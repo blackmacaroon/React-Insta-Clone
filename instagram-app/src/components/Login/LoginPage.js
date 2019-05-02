@@ -1,4 +1,5 @@
 import React from "react";
+import './login.css';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class LoginPage extends React.Component {
     // event.preventDefault()
     const user = this.state.username;
     localStorage.setItem("user", user);
+    // why this ?
     window.location.reload();
   };
 
