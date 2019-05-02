@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from './react';
 
 
 const withAuthenticate = PostsPage => LoginPage =>
@@ -10,10 +10,12 @@ const withAuthenticate = PostsPage => LoginPage =>
       }
 
     }
-
+    ///////////////////////////
+    //toggle login if local storage has 'user' login = true?
+    //with ComponentDidMount because something was updated??
 
     render() {
-      if(this.state.loggedIn) {
+      if(this.state.loggedIn === true) {
         return <PostsPage />;
       } else {
         return <LoginPage />;

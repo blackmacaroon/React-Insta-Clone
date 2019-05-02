@@ -27,12 +27,12 @@ class PostsPage extends React.Component {
     // console.log('render')
     return (
       <div className="App">
+      {/* ///////////////////////////////////////////
+      what do I need to pass to searchbar to search */}
         <SearchBar />
-        {/* App is passing posts array to PostContainer */}
+        {/* PostsPage is passing posts array to PostContainer */}
         <PostContainer 
         posts={this.state.posts} 
-        // handleChanges={this.handleChanges} 
-        // submitComment={this.submitComment}
         />
       </div>
     );
