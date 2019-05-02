@@ -7,7 +7,8 @@ const SearchBar = (props) => {
                   <div className='instagram'><i className="fab fa-instagram"></i> | Instagram</div>
                   <div className='searchBar'>
                         <span className="fas fa-search"></span>
-                        <input type='text' placeholder='search'></input>
+                        {/* Why not onSubmit? */}
+                        <input value={props.searchValue} type='text' placeholder='search' onChange={props.handleChanges}></input>
                   </div>
                   <div className='nav'>
                         <i className="fas fa-compass"></i>

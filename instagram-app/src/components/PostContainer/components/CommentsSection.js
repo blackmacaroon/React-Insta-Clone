@@ -8,7 +8,7 @@ class CommentsSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      commentList: this.props.object.comments,
+      commentList: this.props.mappedPost.comments,
       text: ""
     };
   }
@@ -40,7 +40,7 @@ class CommentsSection extends React.Component {
     return (
       <div className="commentObject">
       {/*render the map of the comments array for each object and pass to Comment*/}
-        {this.props.object.comments.map(comment => (
+        {this.props.mappedPost.comments.map(comment => (
           <div>
             <Comment
               key={comment.text}
@@ -66,7 +66,7 @@ class CommentsSection extends React.Component {
 }
 
 CommentsSection.propTypes = {
-  object: PropTypes.shape({
+  mappedPost: PropTypes.shape({
     username: PropTypes.string.isRequired,
     text: PropTypes.string
   })

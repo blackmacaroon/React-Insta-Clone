@@ -8,33 +8,27 @@ function PostContainer (props) {
       
       // console.log('props', props);
       // receiving props from app array posts
-
+      console.log('postsContainerProps', props)
 
       return (
             <div className='postObject'>
-                  {/* mapping thorough the array posts to create separate objects, passing the objects to Obj and CommentsSection */}
-                  {props.posts.map(object =>
+
                         <div >
                               <Obj
-                              key={object.timestamp}
-                              object={object} />
+                              mappedPost={props.mappedPost}/>
                               <CommentsSection
-                              key={object.timestamp}
-                              object={object} />
+                              mappedPost={props.mappedPost}/>
                               
                               {/* // handleChanges={props.handleChanges} 
                               // submitComment={props.submitComment} */}
                               
                         </div>
-                        
-                  )}
-                  
             </div> 
             
       )
 }
 
 PostContainer.propTypes = {
-      posts: PropTypes.arrayOf(PropTypes.object)
+      posts: PropTypes.arrayOf(PropTypes.mappedPost)
 }
 export default PostContainer;

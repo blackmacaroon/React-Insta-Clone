@@ -29,6 +29,8 @@ class LoginPage extends React.Component {
   render() {
     return (
       <form className="loginForm">
+      <h1>Insta-Clone</h1>
+      <h2>Please Log In</h2>
         <input
           type="text"
           name="username"

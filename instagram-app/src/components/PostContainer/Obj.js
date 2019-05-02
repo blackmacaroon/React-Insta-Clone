@@ -5,7 +5,7 @@ class Obj extends React.Component {
       constructor(props) {
             super(props);
             this.state = {
-                  likes: props.object.likes
+                  likes: props.mappedPost.likes
             };
       }
       // console.log('props', props);
@@ -20,19 +20,19 @@ class Obj extends React.Component {
       render() {
             return (
                   <div className='card'>
-                        <img src={this.props.object.imageUrl} alt='pretty thing'/>
+                        <img src={this.props.mappedPost.imageUrl} alt='pretty thing'/>
                         <div className='anchors'>
                               <i className="fas fa-heart" onClick={this.incrementLike}></i>
                               <i className="fas fa-comment"></i>
                         </div>
-                        <p>{this.props.object.likes} likes</p>
+                        <p>{this.props.mappedPost.likes} likes</p>
                   </div>
             )
       }
 }
 
 Obj.propTypes ={
-      object: PropTypes.shape ({
+      mappedPost: PropTypes.shape ({
             imageUrl: PropTypes.string.isRequired,
             likes: PropTypes.number
       })
